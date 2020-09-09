@@ -1,10 +1,11 @@
 {
   "name": "leshkens/orchid-editor-layout",
-  "description": "A orchid editor layout",
+  "description": "Orchid editor.js layout",
   "license": "MIT",
   "keywords": [
     "orchid",
     "editor",
+    "editor.js",
     "layout"
   ],
   "type": "library",
