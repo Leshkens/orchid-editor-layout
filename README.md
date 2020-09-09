@@ -8,7 +8,7 @@ Editor.js orchid layout
 
 Install via composer
 ```bash
-composer require leshkens/orchid-editor-layout
+composer require leshkens/orchid-editor-layout:dev-master
 ```
 
 ### Publish package assets
