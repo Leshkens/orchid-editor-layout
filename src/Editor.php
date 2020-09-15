@@ -6,10 +6,10 @@ namespace Leshkens\OrchidEditorLayout;
 
 use Exception;
 use Leshkens\OrchidEditorLayout\Tool;
-use Orchid\Screen\Layouts\Base;
+use Orchid\Screen\Layout;
 use Orchid\Screen\Repository;
 
-abstract class Editor extends Base
+abstract class Editor extends Layout
 {
     /**
      * @var Repository|null
