@@ -34,8 +34,6 @@ export default class extends window.Controller {
         let logLevel = this.data.get('log-level')
         let minHeight = this.data.get('min-height')
 
-        console.log(this.tools)
-
         const editor = this.editor = new EditorJS({
 
             data: this.parseJson(this.inputTarget.value),
@@ -86,15 +84,6 @@ export default class extends window.Controller {
         }
         return tools
     }
-
-    // isJson (string) {
-    //     try {
-    //         JSON.parse(string)
-    //     } catch (e) {
-    //         return false
-    //     }
-    //     return true
-    // }
 
     parseJson (json) {
         let result
