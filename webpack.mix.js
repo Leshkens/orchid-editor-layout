@@ -17,5 +17,6 @@ if (mix.inProduction()) {
 
 mix
   .js('resources/js/app.js', 'js/orchid_editor_layout.js')
+  .sass('resources/sass/app.scss', 'css/orchid_editor_layout.css')
   .setPublicPath('public')
   .disableNotifications();

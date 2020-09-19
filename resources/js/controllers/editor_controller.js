@@ -1,19 +1,11 @@
 import EditorJS from '@editorjs/editorjs'
 
-import DelimiterTool from '@editorjs/delimiter'
-import HeaderTool from '@editorjs/header'
-import ListTool from '@editorjs/list'
-import MarkerTool from '@editorjs/marker'
 import ParagraphTool from '@editorjs/paragraph'
 
 export default class extends window.Controller {
 
     tools = {
-        delimiter: DelimiterTool,
         paragraph: ParagraphTool,
-        header: HeaderTool,
-        list: ListTool,
-        marker: MarkerTool
     }
 
     static targets = [
@@ -33,6 +25,7 @@ export default class extends window.Controller {
         let autofocus = this.data.get('autofocus')
         let logLevel = this.data.get('log-level')
         let minHeight = this.data.get('min-height')
+        let validationError = this.data.has('validation-error')
 
         const editor = this.editor = new EditorJS({
 
@@ -56,9 +49,15 @@ export default class extends window.Controller {
 
             onChange: (event) => {
                 event.saver.save().then(outputData => {
-                    this.inputTarget.value = JSON.stringify(outputData)
+                    this.inputTarget.value = outputData.blocks.length ? JSON.stringify(outputData) : null
                 })
             },
+
+            onReady: (event) => {
+                if (validationError) {
+                    this.element.querySelector('.codex-editor').classList.add('codex-editor--validation-failed')
+                }
+            }
         })
 
     }
@@ -67,17 +66,11 @@ export default class extends window.Controller {
         let tools = this.parseJson(this.data.get('tools'))
 
         if (tools !== null && tools instanceof Object) {
-
             Object.keys(tools).map((key) => {
-
                 if (this.tools.hasOwnProperty(key)) {
-
                     tools[key]['class'] = this.tools[key]
-
                 } else {
-
                     delete tools[key]
-
                     console.error(key + ' object not found')
                 }
             })

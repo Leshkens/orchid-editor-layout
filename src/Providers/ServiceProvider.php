@@ -59,10 +59,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             self::CONFIG_PATH,
             self::PACKAGE_NAME
         );
-
-//        $this->app->bind('orchid-editor-layout', function () {
-//            return new OrchidEditorLayout();
-//        });
     }
 
     /**
@@ -75,8 +71,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         View::composer('platform::app', function () {
             $this->dashboard
-                ->registerResource('scripts',
-                    orchid_mix('/js/orchid_editor_layout.js', self::PACKAGE_NAME));
+                ->registerResource('scripts', orchid_mix('/js/orchid_editor_layout.js', self::PACKAGE_NAME))
+                ->registerResource('stylesheets', orchid_mix('/css/orchid_editor_layout.css', self::PACKAGE_NAME));
         });
 
         return $this;

@@ -46,7 +46,8 @@ abstract class Editor extends Layout
             'placeholder'  => $this->placeholder(),
             'autofocus'    => $this->autofocus(),
             'logLevel'     => $this->logLevel(),
-            'minHeight'    => $this->minHeight()
+            'minHeight'    => $this->minHeight(),
+            'maxWidth'     => $this->maxWidth(),
         ]);
     }
 
@@ -80,6 +81,14 @@ abstract class Editor extends Layout
     public function minHeight(): int
     {
         return 300;
+    }
+
+    /**
+     * @return string
+     */
+    public function maxWidth(): string
+    {
+        return '100%';
     }
 
     /**
