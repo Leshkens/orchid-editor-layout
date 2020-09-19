@@ -1,0 +1,46 @@
+
+.codex-editor {
+    border: 1px solid rgba(28,43,54,.1);
+    border-radius: 2px;
+
+    &__redactor {
+        margin: 0 5px!important;
+    }
+
+    .ce-block {
+        color: #1c2b36;
+    }
+
+    .ce-block__content {
+        max-width: 100%;
+        padding: 0.375rem 2.2rem;
+    }
+    .ce-toolbar__content {
+        max-width: 100%;
+    }
+    .ce-toolbar__plus {
+        left: 0;
+    }
+    .ce-toolbar__actions {
+        right: 10px;
+        top: 8px;
+    }
+    .ce-toolbox {
+        left: 25px;
+    }
+    .ce-settings {
+        right: -10px;
+    }
+
+    .cdx-block {
+        padding: 0;
+    }
+
+    .ce-paragraph[data-placeholder]:empty::before {
+        color: #1c2b36;
+    }
+
+    &--validation-failed {
+        border-color: #dc3545!important;
+    }
+}
