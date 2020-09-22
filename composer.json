@@ -1,11 +1,12 @@
 {
-  "name": "leshkens/orchid-editor-layout",
+  "name": "leshkens/orchid-editorjs-layout",
   "description": "Orchid editor.js layout",
   "license": "MIT",
   "keywords": [
     "orchid",
     "editor",
     "editor.js",
+    "editorjs",
     "layout"
   ],
   "type": "library",
@@ -25,12 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Leshkens\\OrchidEditorLayout\\": "src"
+      "Leshkens\\OrchidEditorJsLayout\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Leshkens\\OrchidEditorLayout\\Tests\\": "tests"
+      "Leshkens\\OrchidEditorJdLayout\\Tests\\": "tests"
     }
   },
   "scripts": {
@@ -39,7 +40,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Leshkens\\OrchidEditorLayout\\Providers\\ServiceProvider"
+        "Leshkens\\OrchidEditorJsLayout\\Providers\\ServiceProvider"
       ]
     }
   },

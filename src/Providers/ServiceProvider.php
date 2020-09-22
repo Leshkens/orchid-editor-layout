@@ -12,7 +12,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      * @const string
      */
-    const PACKAGE_NAME = 'orchid-editor-layout';
+    const PACKAGE_NAME = 'orchid-editorjs-layout';
 
     /**
      * @const string
@@ -22,7 +22,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     /**
      * @const string
      */
-    const CONFIG_PATH = __DIR__ . '/../../config/orchid-editor-layout.php';
+    const CONFIG_PATH = __DIR__ . '/../../config/platform-editorjs.php';
 
     /**
      * @var Dashboard
@@ -44,9 +44,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->registerResources();
 
         $this->publishes([
-            self::CONFIG_PATH => config_path('orchid-editor-layout.php'),
-            self::PACKAGE_PATH . 'resources/lang' => resource_path('lang/vendor/orchid-editor-layout'),
-            self::PACKAGE_PATH . 'resources/views' => resource_path('views/vendor/orchid-editor-layout')
+            //self::CONFIG_PATH => config_path('platform-editorjs.php'),
+            self::PACKAGE_PATH . 'resources/lang' => resource_path('lang/vendor/orchid-editorjs-layout'),
+            self::PACKAGE_PATH . 'resources/views' => resource_path('views/vendor/orchid-editorjs-layout')
         ], 'config');
     }
 
@@ -55,10 +55,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(
-            self::CONFIG_PATH,
-            self::PACKAGE_NAME
-        );
+//        $this->mergeConfigFrom(
+//            self::CONFIG_PATH,
+//            'platform-editorjs'
+//        );
     }
 
     /**
@@ -71,8 +71,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         View::composer('platform::app', function () {
             $this->dashboard
-                ->registerResource('scripts', orchid_mix('/js/orchid_editor_layout.js', self::PACKAGE_NAME))
-                ->registerResource('stylesheets', orchid_mix('/css/orchid_editor_layout.css', self::PACKAGE_NAME));
+                ->registerResource('scripts', orchid_mix('/js/orchid_editorjs_layout.js', self::PACKAGE_NAME))
+                ->registerResource('stylesheets', orchid_mix('/css/orchid_editorjs_layout.css', self::PACKAGE_NAME));
         });
 
         return $this;
