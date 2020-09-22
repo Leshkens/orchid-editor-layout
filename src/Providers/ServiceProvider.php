@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Leshkens\OrchidEditorLayout\Providers;
+namespace Leshkens\OrchidEditorJsLayout\Providers;
 
 use Orchid\Platform\Dashboard;
 use Illuminate\Support\Facades\View;

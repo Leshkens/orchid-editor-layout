@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Leshkens\OrchidEditorLayout;
+namespace Leshkens\OrchidEditorJsLayout;
 
 
 class Tool

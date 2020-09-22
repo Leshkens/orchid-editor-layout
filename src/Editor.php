@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Leshkens\OrchidEditorLayout;
+namespace Leshkens\OrchidEditorJsLayout;
 
 use Exception;
-use Leshkens\OrchidEditorLayout\Tool;
+use Leshkens\OrchidEditorJsLayout\Tool;
 use Orchid\Screen\Layout;
 use Orchid\Screen\Repository;
 
