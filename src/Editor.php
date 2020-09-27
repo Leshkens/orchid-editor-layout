@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Leshkens\OrchidEditorJsLayout;
 
 use Exception;
-use Leshkens\OrchidEditorJsLayout\Tool;
 use Orchid\Screen\Layout;
 use Orchid\Screen\Repository;
 
@@ -37,7 +36,7 @@ abstract class Editor extends Layout
 
         $this->query = $repository;
 
-        return view('orchid-editor-layout::editor', [
+        return view('orchid-editorjs-layout::editor', [
             'target'       => $this->target,
             'inputName'    => $this->inputName(),
             'data'         => $repository->get($this->target),
@@ -96,9 +95,9 @@ abstract class Editor extends Layout
      */
     protected function localization(): ?string
     {
-        $trans = trans('orchid-editor-layout::editor');
+        $trans = trans('orchid-editorjs-layout::editor');
 
-        if ($trans !== 'orchid-editor-layout::editor') {
+        if ($trans !== 'orchid-editorjs-layout::editor') {
             return json_encode($trans, JSON_UNESCAPED_UNICODE);
         }
         return null;
