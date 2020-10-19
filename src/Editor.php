@@ -47,7 +47,25 @@ abstract class Editor extends Layout
             'logLevel'     => $this->logLevel(),
             'minHeight'    => $this->minHeight(),
             'maxWidth'     => $this->maxWidth(),
+            'editorTitle'  => $this->editorTitle(),
+            'layoutTitle'  => $this->layoutTitle(),
+            'editorHelp'   => $this->editorHelp(),
         ]);
+    }
+
+    public function editorTitle(): string
+    {
+        return 'ds';
+    }
+
+    public function editorHelp(): string
+    {
+        return '';
+    }
+
+    public function layoutTitle(): string
+    {
+        return '';
     }
 
     /**
@@ -89,6 +107,8 @@ abstract class Editor extends Layout
     {
         return '100%';
     }
+
+
 
     /**
      * @return string|null

@@ -92,11 +92,4 @@ class Tool
     {
         return get_object_vars($this);
     }
-
-//    /**
-//     * @param string $name
-//     *
-//     * @return Tool
-//     */
-//    abstract protected static function make(string $name): Tool;
 }

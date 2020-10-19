@@ -1,9 +1,18 @@
+.editor-layout {
+    //background-color: inherit;
+    //transition: background .2s linear 0s;
+
+    //&:focus-within {
+    //    background-color: #edeeee;
+    //}
+}
+
 .codex-editor {
-    border: 1px solid rgba(28,43,54,.1);
+    border: 1px solid rgba(28, 43, 54, .1);
     border-radius: 2px;
 
-    &__redactor {
-        margin: 0 5px!important;
+    & .svg {
+        fill: #1c2b36;
     }
 
     .ce-block {
@@ -12,21 +21,49 @@
 
     .ce-block__content {
         max-width: 100%;
-        padding: 0.375rem 2.2rem;
+        padding: 0.375rem 2.5rem 0.375rem 0.75rem;
     }
+
     .ce-toolbar__content {
         max-width: 100%;
     }
+
     .ce-toolbar__plus {
-        left: 0;
+        background-color: #ffffff;
+
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
+
+        border-left: 1px solid rgba(28, 43, 54, .1);
+        border-top: 1px solid rgba(28, 43, 54, .1);
+        border-bottom: 1px solid rgba(28, 43, 54, .1);
+        box-shadow: -4px 4px 5px 0px rgb(28 43 54 / 8%);
     }
+
+    .ce-toolbar__settings-btn {
+        width: 22px;
+        height: 22px;
+        background-color: #707684;
+        border-radius: 2px;
+
+        & .icon {
+            fill: #fff;
+        }
+    }
+
+    .ce-toolbar {
+        background-color: #fff;
+    }
+
     .ce-toolbar__actions {
         right: 10px;
-        top: 8px;
+        //top: 8px;
     }
+
     .ce-toolbox {
-        left: 25px;
+        left: 0;
     }
+
     .ce-settings {
         right: -10px;
     }
@@ -40,6 +77,6 @@
     }
 
     &--validation-failed {
-        border-color: #dc3545!important;
+        border-color: #dc3545 !important;
     }
 }
