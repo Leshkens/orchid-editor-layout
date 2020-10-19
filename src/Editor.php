@@ -55,7 +55,7 @@ abstract class Editor extends Layout
 
     public function editorTitle(): string
     {
-        return 'ds';
+        return '';
     }
 
     public function editorHelp(): string
