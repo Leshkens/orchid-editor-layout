@@ -28,9 +28,9 @@
                 <small>{{ $message }}</small>
             </div>
         @else
-            @if($editorTitle)
+            @if($editorHelp)
                 <small class="form-text text-muted">
-                    {{ $editorTitle }}
+                    {{ $editorHelp }}
                 </small>
             @endif
         @enderror
