@@ -1,12 +1,8 @@
 import EditorJS from '@editorjs/editorjs'
 
-import ParagraphTool from '@editorjs/paragraph'
-
 export default class extends window.Controller {
 
-    tools = {
-        paragraph: ParagraphTool,
-    }
+    tools = {}
 
     static targets = [
         'input'
